@@ -17,6 +17,8 @@ services:
       io.rancher.sidekicks: cni-driver
       io.rancher.scheduler.global: 'true'
       io.rancher.cni.link_mtu_overhead: '0'
+      io.rancher.internal.service.vxlan: 'true'
+      io.rancher.service.selector.link: io.rancher.internal.service.vxlan=true
     logging:
       driver: json-file
       options:
